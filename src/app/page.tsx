@@ -4,11 +4,6 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <img
-          src="/myPhoto.jpg" 
-          alt="Моя фотография"
-          className={styles.photo}
-        />
         <div>
           <h1 className={styles.title}>Чернова Мария</h1> 
           <p><strong>Электронная почта:</strong> mariacher2090@gmail.com</p>
