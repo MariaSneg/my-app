@@ -1,101 +1,79 @@
-import Image from "next/image";
+import styles from '../app/styles/Resume.module.css'; 
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <img
+          src="/myPhoto.jpg" 
+          alt="Моя фотография"
+          className={styles.photo}
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+        <div>
+          <h1 className={styles.title}>Чернова Мария</h1> 
+          <p><strong>Электронная почта:</strong> mariacher2090@gmail.com</p>
+          <p><strong>Телефон:</strong> +7 (123) 456-78-90</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </header>
+      
+      <h2>Опыт работы</h2>
+      <ul>
+        <li>
+          <strong>Web-разработчик</strong> Travelline (Июнь 2024 — Август 2024)
+          <p>
+          Проходила практику, где нас учили frontend и backend разработке. 
+          Во время обучения я работала с ASP.NET core, MS SQL, TypeScript, React, 
+          также писала Unit тесты.
+          </p>
+        </li>
+        <li>
+          <strong>Web-разработчик</strong> Юнисистемс (Июнь 2023 — Июль 2023)
+          <p>
+          В компании я проходила практику. Мы разрабатывали страницу сайта по учёту материально-технического оборудования.
+          Во время проекта я:
+          </p>
+          <ul className={styles.sublist}>
+            <li>участвовала в разработке Web API с использованием ASP.NET core</li>
+            <li>работала с PostgreSQL, Docker, Postman</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>Образование</h2>
+      <p>
+      Поволжский государственный технологический университет, Йошкар-Ола
+      Факультет информатики и вычислительной техники, Программная инженерия
+      </p>
+
+      <h2>Навыки</h2>
+      <ul className={styles.skills}>
+        <li>Git</li>
+        <li>SQL</li>
+        <li>REST API</li>
+        <li>API</li>
+        <li>.NET Core</li>
+        <li>ASP.NET Core</li>
+        <li>React</li>
+        <li>ООП</li>
+      </ul>
+
+      <h2>О себе</h2>
+      <div>
+      <p>
+          Курсовой проект: Web-приложение для планирования путешествий. Приложение используется для создания маршрутов, которые потом могут проходить и другие пользователи, оставлять отзывы. Также в приложении можно делиться моментами из путешествий.
+          Проект придумывался и создавался в команде.
+          </p>
+          <p>
+          - Участвовала в разработке back-end части веб-приложения, обеспечивая функциональность для планирования путешествий.
+          - Реализовывала REST API с использованием ASP.NET Core для обработки запросов.
+          - Использовала Entity Framework для работы с базой данных PostgreSQL.
+          </p>
+          <p>
+          В свободное время люблю читать книги, особенно в жанре sci-fi. Также нравится читать различные статьи и слушать подкасты на научные темы. Увлекаюсь китайской культурой и уже три года учу китайский с репетитором.
+          Ответственная, всегда готова узнавать что-то новое и быстро обучаюсь, умею работать в команде, не конфликтная
+          </p>
+      </div> 
+
     </div>
   );
 }
